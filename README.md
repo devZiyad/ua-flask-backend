@@ -5,7 +5,7 @@
 This is a **sanitized public version** of the backend for the **Universal Acceptance Educational Website**.  
 The original private repository included sensitive credentials such as:
 - SMTP server details (IP, username, and password)
-- AI provider API keys (Anthropic/OpenAI)
+- AI provider API keys (Anthropic)
 
 These credentials were removed in this version for security reasons.
 
