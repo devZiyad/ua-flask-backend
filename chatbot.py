@@ -67,7 +67,7 @@ def ask_ai(messages: List[Dict[str, str]], language: str) -> str:
         ]
 
         response = anthropic.messages.create(
-            model="claude-3-sonnet-20240229",  # Or claude-3-opus / haiku
+            model="claude-3-haiku-20240307",
             max_tokens=600,
             temperature=0.3,
             system=system_prompt,
