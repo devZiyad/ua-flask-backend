@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 # Internal utilities
 from validators import validate_email_general, validate_same_script_email
 from mailer import send_confirmation_email
-from chatbot import ask_ai, get_current_file, init as chatbot_init
+from chatbot import ask_ai, init as chatbot_init
 from aiquiz import generate_quiz_questions, init as aiquiz_init
 from summarize import generate_summary_and_questions
 
@@ -170,23 +170,6 @@ def quiz():
     except Exception as e:
         logging.error(f"Error generating quiz: {e}")
         return jsonify({"success": False, "message": "Error generating quiz."}), 500
-
-
-@app.route("/api/file", methods=["GET", "OPTIONS"])
-def file():
-    if request.method == "OPTIONS":
-        return jsonify({}), 200
-
-    logging.info("Received request for current selected file.")
-    try:
-        current_file = get_current_file()
-        return jsonify({"success": True, "file": current_file})
-    except Exception as e:
-        logging.error(f"Error returning file: {e}")
-        return (
-            jsonify({"success": False, "message": "Could not return current file"}),
-            500,
-        )
 
 
 # ================================
