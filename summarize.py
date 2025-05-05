@@ -18,7 +18,7 @@ logging.basicConfig(
 claude = Anthropic(api_key=os.getenv("CLAUDE_API_KEY"))
 
 # Folders and files
-PDF_FOLDER = "tra_documents"
+PDF_FOLDER = "documents"
 SUMMARY_FOLDER = "summaries"
 QUESTION_BANK_EN_FILE = "question_bank_en.json"
 QUESTION_BANK_AR_FILE = "question_bank_ar.json"
@@ -32,6 +32,7 @@ QUESTIONS_PER_DOCUMENT = 5
 
 def ensure_directories() -> None:
     os.makedirs(SUMMARY_FOLDER, exist_ok=True)
+    os.makedirs(PDF_FOLDER, exist_ok=True)
 
 
 def calculate_file_hash(filepath: str) -> str:
