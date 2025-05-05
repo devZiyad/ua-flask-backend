@@ -95,7 +95,7 @@ Thumbs.db
 
 # Project-specific (generated at runtime)
 summaries/
-tra_documents/
+documents/
 pdf_metadata.json
 question_bank_en.json
 question_bank_ar.json
