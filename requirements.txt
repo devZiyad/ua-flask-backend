@@ -1,0 +1,7 @@
+anthropic
+email-validator
+flask
+flask-cors
+idna
+python-dotenv
+pymupdf
